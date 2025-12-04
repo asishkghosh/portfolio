@@ -655,28 +655,29 @@ ul li a:hover {
   margin: 0;
 }
 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tag {
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }.skill-tag {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
-  color: white;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 140, 90, 0.2));
+  color: var(--accent);
+  border: 1px solid rgba(255, 107, 53, 0.3);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.3px;
   transition: var(--transition);
-  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.15);
+  box-shadow: 0 1px 4px rgba(255, 107, 53, 0.1);
 }
 
 .skill-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25);
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(255, 140, 90, 0.3));
+  border-color: rgba(255, 107, 53, 0.5);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.15);
 }
 
 .projects {
@@ -1052,12 +1053,24 @@ ul li a:hover {
 }
 
 @media (max-width: 640px) {
+  body {
+    padding-top: 70px;
+  }
+  
   .container {
-    padding: 0 16px;
+    padding: 0 24px;
+    margin: 0 auto;
   }
   
   .header-inner {
-    padding: 0 16px;
+    padding: 0 24px;
+  }
+  
+  .site-banner {
+    padding: 12px 24px;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
   }
   
   .nav {
